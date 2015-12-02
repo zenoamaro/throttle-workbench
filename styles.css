@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+html {
+    font-family: -apple-system, sans-serif;
+    font-size: 12px;
+}
+
+pre code {
+    font-family: Monaco, Menlo, Lucida Console, monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.Root {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 800px) {
+    .Root {
+        display: block;
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+.Tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, .05);
+    border-bottom: solid thin rgba(0, 0, 0, .1);
+}
+
+.Tabs-Tab {
+    flex: 0 0 auto;
+    padding: 8px 20px;
+    min-width: 150px;
+    border-right: solid thin rgba(0, 0, 0, .2);
+    cursor: pointer;
+}
+
+.Tabs-Tab[data-selected="true"] {
+    position: relative;
+    z-index: 2;
+    background: white;
+    margin-bottom: -1px;
+}
+
+
+.Slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Slider-Label {
+}
+
+.Slider-Control {
+    flex: 1 1 auto;
+    margin: 0 16px;
+}
+
+.Slider-Value {
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+.CodePanel {
+    flex: 1 0 50%;
+    background: #e9f0f4;
+    border-right: solid thin #93bbcb;
+    overflow: scroll;
+}
+
+.CodePanel-Source {
+    padding: 32px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+.BenchPanel {
+    position: relative;
+    flex: 1 0 50%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.BenchPanel-Run {
+    padding: 32px;
+}
+
+.BenchPanel-Run-Log {
+    overflow: hidden;
+    margin-top: 28px;
+    height: 350px;
+}
+
+.BenchPanel-Test {
+    padding: 32px;
+}
+
+.BenchPanel-Test {
+
+}
+
+.BenchPanel-Test-Errors {
+    color: red;
+}
+
+.BenchPanel-Test-Results {
+    list-style: none;
+    padding: 0;
+}
+
+.BenchPanel-Test-Result {
+    margin-bottom: 32px;
+}
+
+.BenchPanel-Test-Result[data-passed="true"] {
+    color: forestgreen;
+}
+
+.BenchPanel-Test-Result[data-passed="false"] {
+    color: red;
+}
+
+.BenchPanel-Test-Result-Info {
+
+}
+
+.BenchPanel-Test-Result-Status {
+    margin-right: 8px;
+}
+
+.BenchPanel-Test-Result-Name {
+    margin-right: 8px;
+}
+
+.BenchPanel-Test-Result-Reason {
+
+}
+
+.BenchPanel-Test-Result-Source {
+    color: #888;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+/* Tomorrow Theme for Highlight.js */
+/* https://github.com/isagalaev/highlight.js/blob/master/src/styles/tomorrow.css */
+
+.hljs {
+    display: block;
+    overflow-x: auto;
+    color: #4d4d4c;
+}
+
+.hljs-emphasis {
+    font-style: italic;
+}
+
+.hljs-strong {
+    font-weight: bold;
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: #8e908c;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+    color: #c82829;
+}
+
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+    color: #f5871f;
+}
+
+.hljs-attribute {
+    color: #eab700;
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+    color: #718c00;
+}
+
+.hljs-title,
+.hljs-section {
+    color: #4271ae;
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+    color: #8959a8;
+}
